@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise Logger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Exercise Logger</h1>
+  </header>
+  <main>
+    <!-- Log Exercise Section -->
+    <section id="log-section">
+      <h2>Log Exercise</h2>
+      <form id="exercise-form">
+        <label for="type">Exercise Type:</label>
+        <div class="type-container">
+          <input type="text" id="type" name="type" placeholder="e.g., Bench Press" autocomplete="off" required>
+          <button type="button" id="type-dropdown-btn">&#9660;</button>
+          <!-- Suggestions will be positioned relative to this container -->
+          <div id="type-suggestions" class="suggestions"></div>
+        </div>
+        
+        <label for="weight">Weight (kgs):</label>
+        <input type="number" id="weight" name="weight" placeholder="e.g., 100" required>
+        
+        <label for="reps">Reps:</label>
+        <input type="number" id="reps" name="reps" placeholder="e.g., 8" required>
+        
+        <label for="sets">Sets:</label>
+        <input type="number" id="sets" name="sets" placeholder="e.g., 3" required>
+        
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes" placeholder="Enter any notes here..."></textarea>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <button type="submit">Add Exercise</button>
+      </form>
+      <button id="go-calendar">View Calendar</button>
+    </section>
+
+    <!-- Calendar Section -->
+    <section id="calendar-section" style="display: none;">
+      <button id="back-to-log">Back to Log</button>
+      <h2>Calendar</h2>
+      
+      <!-- Calendar Controls -->
+      <div id="calendar-controls">
+        <label for="year-select">Year:</label>
+        <select id="year-select"></select>
+        <label for="month-select">Month:</label>
+        <select id="month-select"></select>
+      </div>
+      
+      <div id="calendar"></div>
+      
+      <!-- Exercise Details / Edit Popup -->
+      <div id="exercise-details" style="display: none;"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

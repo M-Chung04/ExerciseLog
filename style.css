@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Section Styling */
+section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Form Styling */
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+/* Container for the type input & dropdown button */
+.type-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.type-container input {
+  flex: 1;
+}
+#type-dropdown-btn {
+  margin-left: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Suggestions dropdown styling */
+.suggestions {
+  position: absolute;
+  right: 0;           /* Align to the right */
+  top: calc(100% + 5px);
+  border: 1px solid #ccc;
+  background: #fff;
+  max-width: 200px;
+  z-index: 1000;
+  display: none;
+}
+.suggestions div {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.suggestions div:hover {
+  background: #eee;
+}
+
+/* Default button styling */
+button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Specific button colors */
+.notes-button {
+  background-color: #3498db;
+}
+.delete-button {
+  background-color: #e74c3c;
+}
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Calendar Controls */
+#calendar-controls {
+  margin: 15px 0;
+  text-align: center;
+}
+
+#calendar-controls label {
+  margin-right: 5px;
+}
+
+#calendar-controls select {
+  margin-right: 15px;
+  padding: 5px;
+}
+
+/* Calendar Styles */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.calendar-header {
+  font-weight: bold;
+  text-align: center;
+  background-color: #ddd;
+  padding: 5px 0;
+  border-radius: 4px;
+}
+
+.calendar-cell {
+  background-color: #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.calendar-cell:hover {
+  background-color: #d0d0d0;
+}
+
+/* Highlight days with logged exercises */
+.calendar-cell.highlight {
+  background-color: #90ee90;
+}
+
+/* Exercise Details & Edit Form */
+#exercise-details {
+  margin-top: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Flex container for inline edit fields */
+.edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.edit-row label {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.edit-row input,
+.edit-row textarea {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.edit-row textarea {
+  max-width: 200px;
+}
+
+/* Adjustments for larger textareas in forms if needed */
